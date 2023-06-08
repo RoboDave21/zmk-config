@@ -21,6 +21,13 @@
    // tapping_term_ms = <200>;
 };
 
+
+&sk {
+    release-after-ms = <2000>;
+    quick-release;
+    ignore-modifiers;
+};
+
 / {
 
     combos {
@@ -31,30 +38,29 @@
             bindings = <&kp ESC>;
         };
 
-         combo_tab {
+        combo_tab {
             timeout-ms = <50>;
             key-positions = <10 11>;
             bindings = <&kp TAB>;
         };
 
-            combo_ralt {
+        combo_ralt {
             timeout-ms = <50>;
             key-positions = <17 16>;
             bindings = <&kp RALT>;
         };
 
-                    combo_lalt {
+        combo_lalt {
             timeout-ms = <50>;
             key-positions = <11 12>;
             bindings = <&kp LALT>;
         };
 
-                           combo_lgui {
+        combo_lgui {
             timeout-ms = <50>;
             key-positions = <12 13>;
             bindings = <&kp LGUI>;
         };
-
 
        combo_rgui {
             timeout-ms = <50>;
@@ -67,7 +73,7 @@
     };
 
     behaviors {
-        bspc_del: backspace_delete {
+        bspc_del: bspc_del {
             compatible = "zmk,behavior-mod-morph";
             label = "BACKSPACE_TO_DELETE";
             #binding-cells = <0>;
@@ -75,11 +81,6 @@
             mods = <(MOD_LSFT)>;
         };
 
-        &sk {
-            release-after-ms = <2000>;
-            quick-release;
-            ignore-modifiers;
-        };
 
 
 
@@ -122,23 +123,6 @@
         >;
         };
 
-            symbols_layer {
-        bindings = <
-        //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        //│ @           │ !           │ €           │ $           │ %           │   │ &           │ /           │ \           │ ?           │ ´`          │
-            &gresc       &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &kp P
-        //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        //│ |           │ {           │ [           │ (           │ <           │   │ >           │ )           │ ]           │ }           │ BSC         │
-            &kp A         &kp S         &kp D         &kp F         &kp G             &kp H         &kp J         &kp K         &kp L         &kp BSPC
-        //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        //│ Y           │ X           │ C           │ V           │ B           │   │ N           │ M           │ ,           │ .           │ ENTER       │
-            &mt LSFT Y    &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp CMMA      &kp DOT       &kp ENTER
-        //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        //│                                         │ THUMB 2     │ THUMB 1     │   │ THUMB 1     │ THUMB 2     │ 
-                                                      &mo 1         &kp LSHFT         &kp SPACE     &mo 2
-        //                                          ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
-        >;
-        };
 
 
 
