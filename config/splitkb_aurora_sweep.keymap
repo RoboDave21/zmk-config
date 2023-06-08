@@ -10,10 +10,6 @@
 
 #include "german-keymap.h"
 
-// Home row mods macro
-#define HRML(k2,k3,k4) &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
-#define HRMR(k1,k2,k3) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3
-
 
 &mt {
   //  flavor = "tap-preferred";
@@ -78,7 +74,7 @@
 };
 
 
-
+eeeeeee
 
 
 /*                              34 KEY MATRIX / LAYOUT MAPPING
@@ -101,7 +97,7 @@
             &gresc        &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &kp P
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│ A           │ S           │ D           │ F           │ G           │   │ H           │ J           │ K           │ L           │ BSC         │
-            &kp A         HRML(S,       D,            F)            &kp G             &kp H         HRMR(J,       K,             L)           &kp BSPC
+            &kp A         &kp S,       &kp D          &kp F         &kp G             &kp H         &kp J         &kp K         &kp L           &kp BSPC
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│ Y           │ X           │ C           │ V           │ B           │   │ N           │ M           │ ,           │ .           │ ENTER       │
             &kp Y         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp CMMA      &kp DOT       &kp ENTER
