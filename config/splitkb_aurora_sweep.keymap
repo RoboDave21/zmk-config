@@ -61,6 +61,21 @@
 
     };
 
+    behaviors {
+        gresc: grave_escape {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GRAVE_ESCAPE";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>, <&kp Q>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
+        };
+    };
+
+
+
+
+
+
 /*                              34 KEY MATRIX / LAYOUT MAPPING
 
   ╭────────────────────┬────────────────────╮ ╭─────────────────────┬─────────────────────╮
@@ -78,7 +93,7 @@
         bindings = <
         //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
         //│ Ü           │ W           │ E           │ R           │ T           │   │ Y           │ U           │ I           │ O           │ P           │
-            &kp DE_UE     &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &kp P
+            &gresc       &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &kp P
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│ A           │ S           │ D           │ F           │ G           │   │ H           │ J           │ K           │ L           │ BSC         │
             &kp A         &kp S         &kp D         &kp F         &kp G             &kp H         &kp J         &kp K         &kp L         &kp QUOT
