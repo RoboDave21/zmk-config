@@ -7,10 +7,12 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 
 #include "german-keymap.h"
  
-
+#define WHRML(k2,k3,k4) &ht LALT k2  &ht LGUI k3  &ht LCTRL k4
+#define WHRMR(k1,k2,k3) &ht RCTRL k1  &ht RGUI k2  &ht RALT k3
 
 
 
@@ -95,17 +97,17 @@
               ╰────────┴────────╯                         ╰─────────┴─────────╯             */
 
 
-        keymap {
-                compatible = "zmk,keymap";
+    keymap {
+        compatible = "zmk,keymap";
 
-            default_layer {
-        bindings = <
+        default_layer {
+            bindings = <
         //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
         //│ Q           │ W           │ E           │ R           │ T           │   │ Y           │ U           │ I           │ O           │ P           │
             &kp Q         &kp W         &kp E         &kp R         &kp T             &kp Y         &kp U         &kp I         &kp O         &kp P
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│ A           │ S           │ D           │ F           │ G           │   │ H           │ J           │ K           │ L           │ BSPC        │
-            &kp A         &kp S         &kp D         &kp F         &kp G             &kp H         &kp J         &kp K         &kp L         &bspc_del
+            &kp A         WHRML(S,      D,            F)            &kp G             &kp H         WHRMR(J,      K,            L)            &bspc_del
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│ Y           │ X           │ C           │ V           │ B           │   │ N           │ M           │ ,           │ .           │ ENTER       │
             &mt LSFT Y    &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &kp CMMA      &kp DOT       &kp ENTER
