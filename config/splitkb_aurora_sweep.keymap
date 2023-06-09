@@ -139,19 +139,19 @@
         layer_1 {
             bindings = <
         //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-        //│ Q           │ W           │ E           │ R           │ T           │   │ Y           │ U           │ I           │ O           │ P           │
-            &none         &none         &kp C_MUTE   &kp C_VOL_DN   &kp C_VOL_UP      &kp PSCRN     &kp DE_UE     &kp UP        &kp DE_OE     &kp APOS
+        //│ none        │ none        │ Mute        │ Vol Down    │ Vol Up      │   │ ScrShot     │ Ü           │ Arrow Up    │ Ö           │ Apostroph   │
+            &none         &none         &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP      &kp PSCRN     &kp DE_UE     &kp UP        &kp DE_OE     &kp APOS
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        //│ A           │ S           │ D           │ F           │ G           │   │ H           │ J           │ K           │ L           │ BSPC DEL    │
-            &kp A         HRML(S,       D,            F)            &kp G             &kp H         HRMR(J,       K,            L)            &bspc_del
+        //│ Ä           │ ß           │ Previous    │ Play Pause  │ Next        │   │ Home        │ Arrow right │ Arrow down  │ Arrow right │ BSPC DEL    │
+            &kp DE_AE     &kp DE_SS     &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT      &kp HOME      &kp LEFT      &kp DOWN      &kp RIGHT     &bspc_del
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-        //│ Y           │ X           │ C           │ V           │ B           │   │ N           │ M           │ , ;         │ . ;         │ ENTER       │
-            &kp Y         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &cma_scln     &dot_cln      &kp ENTER
+        //│ Next BLE    │ Previous BLE│ Clear BLE   │ Out BLE     │ Out USB     │   │ End         │ none        │ none        │ →           │ ENTER       │
+            &bt BT_NXT    &bt BT_PRV    &bt BT_CLR    &out OUT_BLE  &out OUT_USB      &kp END       &none         &none         &none         &kp ENTER
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│                                         │ THUMB 2     │ THUMB 1     │   │ THUMB 1     │ THUMB 2     │ 
                                                       &to 0         &sk LSHIFT        &kp SPACE     &none
         //                                          ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
-            >;  
+            >;
         };
 
 
