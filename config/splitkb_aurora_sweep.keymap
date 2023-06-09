@@ -11,7 +11,7 @@
 
 #include "german-keymap.h"
 
-
+#define MO_TOG(layer) &mo_tog layer layer   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
 
 #define HRML(k2,k3,k4) &ht LCTRL k2  &ht LGUI k3  &ht LALT k4
 #define HRMR(k1,k2,k3) &ht RALT k1  &ht RGUI k2  &ht RCTRL k3
@@ -89,7 +89,7 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mo_tog: mo_tog {
+        mo_tog: behavior_mo_tog {
             compatible = "zmk,behavior-hold-tap";
             label = "mo_tog";
             #binding-cells = <2>;
@@ -113,7 +113,7 @@
     ╰───────────╮ 30  31 │ 32  33 ╭───────────╯ ╰───────────╮ LH1 LH0 │ RH0 RH1 ╭───────────╯
                 ╰────────┴────────╯                         ╰─────────┴─────────╯             */
 
-^^
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -130,11 +130,28 @@
             &kp Y         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &cma_scln     &dot_cln      &kp ENTER
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│                                         │ THUMB 2     │ THUMB 1     │   │ THUMB 1     │ THUMB 2     │ 
-                                                      &none         &sk LSHIFT        &kp SPACE     &none
+                                                      &MO_TOG(1)    &sk LSHIFT        &kp SPACE     &to 1
         //                                          ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;  
         };
 
+        layer_1 {
+            bindings = <
+        //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+        //│ none        │ none        │ Mute        │ Vol Down    │ Vol Up      │   │ ScrShot     │ Ü           │ Arrow Up    │ Ö           │ Apostroph   │
+            &none         &none         &kp C_MUTE    &kp C_VOL_DN  &kp C_VOL_UP      &kp PSCRN     &DE_UE        &kp UP        &DE_OE        &kp APOS
+        //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+        //│ Ä           │ ß           │ Previous    │ Play Pause  │ Next        │   │ Home        │ Arrow right │ Arrow down  │ Arrow right │ BSPC DEL    │
+            &DE_AE        &DE_SS       &kp C_PREV  &kp C_PLAY_PAUSE  &kp C_NEXT       &kp HOME      &kp LEFT      &kp DOWN      &kp RIGHT     &bspc_del
+        //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+        //│ Next BLE    │ Previous BLE│ Clear BLE   │ Out BLE     │ Out USB     │   │ End         │ none        │ none        │ →           │ ENTER       │
+            &bt BT_NXT    &bt BT_PRV    &bt BT_CLR    &out OUT_BLE  &out OUT_USB      &kp END       &none         &none         &none         &kp ENTER
+        //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+        //│                                         │ THUMB 2     │ THUMB 1     │   │ THUMB 1     │ THUMB 2     │ 
+                                                      &to 0         &sk LSHIFT        &kp SPACE     &none
+        //                                          ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
+            >;
+        };
 
 
 
