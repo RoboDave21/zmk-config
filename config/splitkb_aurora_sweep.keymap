@@ -98,6 +98,14 @@
             bindings = <&mo>, <&tog>;
         };
 
+        eql_tdl: eql_tdl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "equal_to_tilde";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL>, <&kp TILDE>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         
 
     // END BEHAVIORS
@@ -149,11 +157,29 @@
             &bt BT_NXT    &bt BT_PRV    &bt BT_CLR    &out OUT_BLE  &out OUT_USB      &kp END       &none         &none         &none         &kp ENTER
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│                                         │ THUMB 2     │ THUMB 1     │   │ THUMB 1     │ THUMB 2     │ 
-                                                      &to 0         &sk LSHIFT        &kp SPACE     &none
+                                                      &to 0         &sk LSHIFT        &kp SPACE     &to 2
         //                                          ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;
         };
 
+
+        layer_2 {
+            bindings = <
+        //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
+        //│ @           │ !           │ €           │ $           │ %           │   │ &           │ /           │ \           │ ?           │ ´`          │
+            &kp AT        &kp EXCL      &kp DE_EURO   &kp DLLR      &kp PRCNT         &kp AMPS      &kp KP_SLASH  &kp BSLH         &kp O         &kp P
+        //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+        //│ |           │ {           │ [           │ (           │ <           │   │ >           │ )           │ ]           │ }           │ BSPC DEL    │
+            &kp PIPE      &kp LBRC      &kp LBKT      &kp LPAR      &kp LT            &kp GT        &kp RPAR      &kp RBKT      &kp RBRC      &bspc_del
+        //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+        //│ #           │ "           │ ^           │ °           │ =~          │   │ +           │ -–          │ *           │ _           │ ENTER       │
+            &kp HASH      &kp DQT       &kp CARET     &kp DE_DEG    &eql_tdl          &kp PLUS      &none         &kp STAR      &kp UNDER     &kp ENTER
+        //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
+        //│                                         │ THUMB 2     │ THUMB 1     │   │ THUMB 1     │ THUMB 2     │ 
+                                                      &to 1         &sk LSHIFT        &kp SPACE     &none
+        //                                          ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
+            >;  
+        };
 
 
 
