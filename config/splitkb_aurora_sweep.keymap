@@ -11,7 +11,7 @@
 
 #include "german-keymap.h"
 
-#define MO_TOG(layer) &mo_tog layer layer   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
+
 
 #define HRML(k2,k3,k4) &ht LCTRL k2  &ht LGUI k3  &ht LALT k4
 #define HRMR(k1,k2,k3) &ht RALT k1  &ht RGUI k2  &ht RCTRL k3
@@ -89,7 +89,7 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        mo_tog: behavior_mo_tog {
+        mo_tog: mo_tog {
             compatible = "zmk,behavior-hold-tap";
             label = "mo_tog";
             #binding-cells = <2>;
