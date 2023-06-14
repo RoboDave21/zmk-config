@@ -101,13 +101,13 @@
             mods = <(LSHIFT|RSHIFT)>;
         };
 
-        mo_sl: behavior_mo_sl {
+        mo_tog: behavior_mo_tog {
             compatible = "zmk,behavior-hold-tap";
-            label = "mo_sl";
+            label = "mo_tog";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo 1>, <&sl 1>;
+            bindings = <&mo>, <&tog>;
         };
 
         eql_tdl: eql_tdl {
@@ -150,7 +150,7 @@
             &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &cma_scln     &dot_cln      &kp ENTER
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│                                         │ THUMB 2     │ THUMB 1     │   │ THUMB 1     │ THUMB 2     │ 
-                                                      &mo_sl       &sk LSHIFT         &kp SPACE     &to 1
+                                                      &sl 1         &sk LSHIFT         &kp SPACE     &to 1
         //                                          ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;  
         };
