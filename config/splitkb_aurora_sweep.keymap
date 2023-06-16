@@ -82,7 +82,7 @@
             label = "BACKSPACE_TO_DELETE";
             #binding-cells = <0>;
             bindings = <&kp BSPC>, <&kp DEL>;
-            mods = <(LSHIFT)>;
+            mods = <(LSHIFT|RSHIFT)>;
         };
 
         cma_scln: cma_scln {
