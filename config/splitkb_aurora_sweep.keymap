@@ -93,7 +93,7 @@
             label = "BACKSPACE_TO_DELETE";
             #binding-cells = <0>;
             bindings = <&kp BSPC>, <&kp DEL>;
-            mods = <(LSHIFT|RSHIFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         cma_scln: cma_scln {
@@ -101,7 +101,7 @@
             label = "cma_to_scln";
             #binding-cells = <0>;
             bindings = <&kp DE_COMM>, <&kp DE_SCLN>;
-            mods = <(LSHIFT|RSHIFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         dot_cln: dot_cln {
@@ -109,7 +109,7 @@
             label = "dot_to_cln";
             #binding-cells = <0>;
             bindings = <&kp DE_DOT>, <&kp DE_COLN>;
-            mods = <(LSHIFT|RSHIFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         mo_tog: behavior_mo_tog {
@@ -126,7 +126,7 @@
             label = "equal_to_tilde";
             #binding-cells = <0>;
             bindings = <&kp DE_EQL>, <&kp DE_W_TILD>;
-            mods = <(LSHIFT|RSHIFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
 
