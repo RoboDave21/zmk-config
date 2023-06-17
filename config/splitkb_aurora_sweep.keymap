@@ -85,7 +85,7 @@
             tapping-term-ms = <220>;
             quick-tap-ms = <150>;
             global-quick-tap;
-            bindings = <&sk>, <&kp>;
+            bindings = <&kp>, <&sk>;
         };
 
         bspc_del: bspc_del {
