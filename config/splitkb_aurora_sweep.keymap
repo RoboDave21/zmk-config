@@ -77,17 +77,6 @@
             bindings = <&kp>, <&kp>;
         };
 
-        skht: sticky_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "sticky_hold_tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
-            global-quick-tap;
-            bindings = <&kp>, <&sk>;
-        };
-
         bspc_del: bspc_del {
             compatible = "zmk,behavior-mod-morph";
             label = "BACKSPACE_TO_DELETE";
@@ -162,7 +151,7 @@
             &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &cma_scln     &dot_cln      &kp ENTER
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│                                         │ THUMB 2     │ THUMB 1     │   │ THUMB 1     │ THUMB 2     │ 
-                                                      &sl 1         &kp LSHIFT        &kp SPACE     &to 1
+                                                      &sl 1         &sk LSHIFT        &kp SPACE     &to 1
         //                                          ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;  
         };
