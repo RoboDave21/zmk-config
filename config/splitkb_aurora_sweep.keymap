@@ -77,6 +77,17 @@
             bindings = <&kp>, <&kp>;
         };
 
+        skht: sticky_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "sticky_hold_tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&sk>, <&kp>;
+        };
+
         bspc_del: bspc_del {
             compatible = "zmk,behavior-mod-morph";
             label = "BACKSPACE_TO_DELETE";
@@ -118,6 +129,7 @@
             mods = <(LSHIFT|RSHIFT)>;
         };
 
+
         
 
     // END BEHAVIORS
@@ -150,7 +162,7 @@
             &kp Z         &kp X         &kp C         &kp V         &kp B             &kp N         &kp M         &cma_scln     &dot_cln      &kp ENTER
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│                                         │ THUMB 2     │ THUMB 1     │   │ THUMB 1     │ THUMB 2     │ 
-                                                      &sl 1         &sk LSHIFT         &kp SPACE     &to 1
+                                                      &sl 1     &skht LSHIFT LSHIFT   &kp SPACE     &to 1
         //                                          ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
             >;  
         };
@@ -185,7 +197,7 @@
             &kp PIPE      &kp LBRC      &kp LBKT      &kp LPAR      &kp LT            &kp GT        &kp RPAR      &kp RBKT      &kp RBRC      &bspc_del
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│ #           │ "           │ ^           │ °           │ =~          │   │ +           │ - –         │ *           │ _           │ ENTER       │
-            &kp HASH      &kp DQT       &kp CARET     &kp DE_DEG    &eql_tdl          &kp PLUS      &kp DE_MINS   &kp STAR      &kp DE_UNDS   &kp ENTER
+            &kp DE_HASH   &kp DQT       &kp CARET     &kp DE_DEG    &eql_tdl          &kp PLUS      &kp DE_MINS   &kp STAR      &kp DE_UNDS   &kp ENTER
         //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
         //│                                         │ THUMB 2     │ THUMB 1     │   │ THUMB 1     │ THUMB 2     │ 
                                                       &to 1         &sk LSHIFT        &kp SPACE     &to 3
