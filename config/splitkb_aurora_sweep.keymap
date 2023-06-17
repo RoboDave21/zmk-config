@@ -114,7 +114,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "equal_to_tilde";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL>, <&kp TILDE>;
+            bindings = <&kp DE_EQL>, <&kp DE_W_TILD>;
             mods = <(LSHIFT|RSHIFT)>;
         };
 
