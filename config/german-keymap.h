@@ -56,6 +56,7 @@
 #define DE_COMM     COMMA              // ,
 #define DE_DOT      PERIOD             // .
 #define DE_MINS     SLASH              // -
+#define DE_BSLH     BACKSLASH          // \
 
 /* Shifted symbols
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬─────┐
