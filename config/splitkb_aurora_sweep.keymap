@@ -163,7 +163,7 @@
 
 
         layer_1 {
-            label = "UM FCTN"
+            label = "UM_FCTN"
             bindings = <
         //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
         //│ none        │ none        │ Mute        │ Vol Down    │ Vol Up      │   │ ScrShot     │ Ü           │ Arrow Up    │ Ö           │ Apostroph   │
