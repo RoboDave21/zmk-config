@@ -16,7 +16,10 @@
 #define HRML(k2,k3,k4) &ht LCTRL k2  &ht LGUI k3  &ht LALT k4
 #define HRMR(k1,k2,k3) &ht RALT k1  &ht RGUI k2  &ht RCTRL k3
 
-
+#define BASE 0
+#define UM FCTN 1
+#define SYM 2
+#define NUM F 3
 
 
 &mt {
